@@ -24,11 +24,11 @@ The idea here is that the network is split into branches with a maximum of two i
 
 # Step 3
 
-Now that we know from step 2 that A and x should go into branch 1, we can conclude on the final Branch Model architecture:
+Now that we know from step 2 that A and x should go into branch 1, we can setup the final Branch Model architecture:
 
 ![input split test](images/final_architecture.png)
 
-In the final script: 03_final_branch_model.py, this architecture is trained, and the we plot the mapping of the two branches to transparently reveal the relationship between the output y and the three inputs A, x and B.
+In the final script: 03_final_branch_model.py, this architecture is trained, and then we plot the mapping of the two branches to transparently reveal the relationship between the output y and the three inputs A, x and B.
 
 ![input split test](images/branch_1.png)
 ![input split test](images/branch_2.png)
