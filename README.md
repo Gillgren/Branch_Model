@@ -6,7 +6,7 @@ Assume that we have a variable of interest y, and we want to investigate how it 
 
 y = Asin(10x) + B
 
-which we pretend that we do not know about.
+which we pretend we do not know.
 
 # Step 1 
 
