@@ -18,8 +18,19 @@ In the second script: 02_finding_branch_model_architecture.py, we begin playing 
 
 ![input split test](images/branch_model.png)
 
-The idea here is that the network is split into branches with a maximum of two inputs each. This enables interpretability as the output of each branch can be plotted versus its two inputs, which is demonstrated in step 3. However, before that, we need to figure out which of the inputs that should go into the different branches. This is the main task of step 2, and is done by training Branch Models and evaluating the error of each possible setup. As can be seen in the image below, parsing A and x through Branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in true underlying equation needs to be calculated before we can add B.
+The idea here is that the network is split into branches with a maximum of two inputs each. This enables interpretability as the output of each branch can be plotted versus its two inputs, which is demonstrated in step 3. However, before that, we need to figure out which of the inputs that should go into the different branches. This is the main task of step 2, and is done by training Branch Models and evaluating the error of each possible setup. As can be seen in the image below, parsing A and x through Branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in the true underlying equation needs to be calculated before we can add B.
+
+![input split test](images/input_split_test.png)
+
+# Step 3
+
+Now that we know from step 2 that A and x should go into branch 1, we can conclude on the final Branch Model architecture:
 
 ![input split test](images/final_architecture.png)
 
-Script 03 plots the mapping of the two branches in the final Branch Model to transparently reveal the relationship between the output y and the three inputs A, x and B. As expected, the visualizations mirror the true underlying function. See the images branch_1_from_script_03.pdf and branch_2_from_script_03.pdf in "images".
+In the final script: 03_final_branch_model.py, this architecture is trained, and the we plot the mapping of the two branches to transparently reveal the relationship between the output y and the three inputs A, x and B.
+
+![input split test](images/branch_1.png)
+![input split test](images/branch_2.png)
+
+Note that in order to grasp the relationship between y and the inputs A and x, we need to analyze the intermediate parameter z. In total, we observe a sine-like dependency between x and z (which is proportional to y), where A determines the amplitude of the sine wave. We also see that B is linearly correlated with y. In other words, through the visualizations, we have obtained a global overview the parameter relationships. In this case, the Branch Model does a good job in overall mirroring the true underlying function.
