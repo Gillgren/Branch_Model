@@ -13,7 +13,7 @@ In the first script: 01_benchmark_nn.py, we build a regular dense neural network
 
 In the second script: 02_finding_branch_model_architecture.py, we begin playing around with Branch Models. For three input parameters, the architecture should look like:
 
-where we need to investigate which input parameters that should go into the different branches by evaluating the error of each possible setup. As we can see in the image below, parsing A and x through Branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in true underlying equation needs to be calculated before we can add B.
+The main task of step 2 is to investigate which input parameters that should go into the different branches by evaluating the error of each possible setup. As we can see in the image below, parsing A and x through Branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in true underlying equation needs to be calculated before we can add B.
 
 ![input split test](images/input_split_test_from_script_02.pdf)
 
