@@ -1,9 +1,12 @@
 # Branch_Model
-The Branch Model is an interpretable machine learning model. This means that it can transparently reveal what it has learned about the relationship between the input parameters and the output parameter. It does so through its architectural design, where the model consists of branches with two input parameters and one output parameter each. Here, each branch consists of dense neural networks layers. As each branch only has two input parameters, the predicted output of each branch can be plotted versus its two inputs, as will be demonstrated in the example in this repository. In this way, global interpretability of the full model can be facilitated through visualizations. 
+The Branch Model is an interpretable machine learning model. This means that it can transparently reveal what it has learned about the relationship between the input parameters and the output parameter. The example in this repository demonstrates how the methodology works.
 
-In the example presented in this repository, we will predict a variable y from three input parameters A, x and B, where the true underlying function is:
+# Scenario
+Assume that we have a variable of interest y, and we want to investigate how it depends on three input parameters A, x and B. Here, the true underlying function is:
 
 y = Asin(10x) + B
+
+which we pretend that we do not know about.
 
 # Step 1 
 
