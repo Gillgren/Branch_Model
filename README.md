@@ -36,7 +36,7 @@ In the final script: 03_final_branch_model.py, this architecture is trained, and
     <img src="images/branch_2.png" alt="branch 2" width="400"/>
 </div>
 
-Note that in order to grasp the relationship between y and the inputs A and x, we need to analyze the intermediate parameter z. In total, we observe a sine-like dependency between x and z (which is proportional to y), where A determines the amplitude of the sine wave. We also see that B is linearly correlated with y, where the contribution from B appears to be summed with the contribution from z (x and A). In other words, through the visualizations, we have obtained a global overview of the parameter relationships. In this case, the Branch Model is succesful in overall mirroring the true underlying function.
+Note that in order to grasp the relationship between y and the inputs A and x, we need to analyze the intermediate parameter z. In total, we observe a sine-like dependency between x and z (which is proportional to y), where A determines the amplitude of the sine wave. We also see that B is linearly correlated with y, where the contribution from B appears to be summed with the contribution from z (x and A). In other words, through the visualizations, we have obtained a global overview of the parameter relationships. In this case, the Branch Model is successful in overall mirroring the true underlying function.
 
 # Remarks
 
