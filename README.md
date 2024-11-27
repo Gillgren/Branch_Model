@@ -42,4 +42,4 @@ Note that in order to grasp the relationship between y and the inputs A and x, w
 
 The current state of the Branch Model methodology is suitable for cases with relatively few input parameters (< 10) as the complexity increases with the number of inputs. We also want to acknowledge that the idea of visualizing neural network mappings is inspired by Neural Additive Models (NAMs).
 
-Note about running the codes: Occasionally, the weights can get stuck in local optima during training, which may lead to a higher error than expected. If this happens, just rerun the code. Alternatively, consider adjusting the code so that each Branch Model setup is trained several times, and select the minimum error for the evaluation of the setup to bypass the occasional bad local optima.
+Note about running the codes: Occasionally, the weights can get stuck in local optima during training, which may lead to a higher error than expected. If this happens, just rerun the code. Alternatively, consider adjusting the code so that each Branch Model setup is trained several times, and select the minimum error for the evaluation of the setup to bypass the occasional high error instances.
