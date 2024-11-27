@@ -18,7 +18,7 @@ In the second script: 02_finding_branch_model_architecture.py, we begin playing 
 
 ![input split test](images/branch_model.png)
 
-The idea here is that the network is split into branches with a maximum of two inputs each. This enables interpretability as the output of each branch can be plotted versus its two inputs, which is demonstrated in step 3. However, before that, we need to figure out which of the inputs that should go into the different branches. This is the main task of step 2, and is done by training Branch Models and evaluating the error of each possible setup. As can be seen in the image below, parsing A and x through branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in the true underlying equation needs to be calculated before it can be summarized with B.
+The idea here is that the network is split into branches with a maximum of two inputs each. This enables interpretability as the output of each branch can be plotted versus its two inputs, which is demonstrated in step 3. However, before that, we need to figure out which of the inputs should go into the different branches. This is the main task of step 2, and is done by training Branch Models and evaluating the error of each possible setup. As can be seen in the image below, parsing A and x through branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in the true underlying equation needs to be calculated before it can be summarized with B.
 
 
 <img src="images/input_split_test.png" alt="Input split test" width="450"/>
@@ -40,4 +40,4 @@ Note that in order to grasp the relationship between y and the inputs A and x, w
 
 # Remarks
 
-The current state of the Branch Model methodology is suitable for cases with relatively few input parameters (< 10) as the complexity increases with the number of inputs. We aslo want to acknowledge that the idea of visualizing neural network mappings is inspired by Neural Additive Models (NAMs).
+The current state of the Branch Model methodology is suitable for cases with relatively few input parameters (< 10) as the complexity increases with the number of inputs. We also want to acknowledge that the idea of visualizing neural network mappings is inspired by Neural Additive Models (NAMs).
