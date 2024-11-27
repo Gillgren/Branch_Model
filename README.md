@@ -21,7 +21,7 @@ In the second script: 02_finding_branch_model_architecture.py, we begin playing 
 The idea here is that the network is split into branches with a maximum of two inputs each. This enables interpretability as the output of each branch can be plotted versus its two inputs, which is demonstrated in step 3. However, before that, we need to figure out which of the inputs that should go into the different branches. This is the main task of step 2, and is done by training Branch Models and evaluating the error of each possible setup. As can be seen in the image below, parsing A and x through Branch 1 results in the lowest error, meaning that it is the appropriate choice of parameters to be parsed through branch 1. This is expected since the first term in the true underlying equation needs to be calculated before we can add B.
 
 
-<img src="images/input_split_test.png" alt="Input split test" width="500"/>
+<img src="images/input_split_test.png" alt="Input split test" width="450"/>
 
 # Step 3
 
@@ -32,8 +32,8 @@ Now that we know from step 2 that A and x should go into branch 1, we can setup 
 In the final script: 03_final_branch_model.py, this architecture is trained, and then we plot the mapping of the two branches to transparently reveal the relationship between the output y and the three inputs A, x and B.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="images/branch_1.png" alt="branch 1" width="450"/>
-    <img src="images/branch_2.png" alt="branch 2" width="450"/>
+    <img src="images/branch_1.png" alt="branch 1" width="400"/>
+    <img src="images/branch_2.png" alt="branch 2" width="400"/>
 </div>
 
 Note that in order to grasp the relationship between y and the inputs A and x, we need to analyze the intermediate parameter z. In total, we observe a sine-like dependency between x and z (which is proportional to y), where A determines the amplitude of the sine wave. We also see that B is linearly correlated with y, where the contribution from B appears to be summed with the contribution from z (x and A). In other words, through the visualizations, we have obtained a global overview of the parameter relationships. In this case, the Branch Model is succesful in overall mirroring the true underlying function.
