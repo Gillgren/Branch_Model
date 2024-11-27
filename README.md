@@ -25,7 +25,7 @@ The idea here is that the network is split into branches with a maximum of two i
 
 # Step 3
 
-Now that we know from step 2 that A and x should go into branch 1, we can setup the final Branch Model architecture:
+Now that we know from step 2 that A and x should go into branch 1, we can build the final Branch Model architecture:
 
 ![input split test](images/final_architecture.png)
 
