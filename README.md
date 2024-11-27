@@ -32,8 +32,8 @@ Now that we know from step 2 that A and x should go into branch 1, we can setup 
 In the final script: 03_final_branch_model.py, this architecture is trained, and then we plot the mapping of the two branches to transparently reveal the relationship between the output y and the three inputs A, x and B.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="images/branch_1.png" alt="branch 1" width="500"/>
-    <img src="images/branch_2.png" alt="branch 2" width="500"/>
+    <img src="images/branch_1.png" alt="branch 1" width="450"/>
+    <img src="images/branch_2.png" alt="branch 2" width="450"/>
 </div>
 
 Note that in order to grasp the relationship between y and the inputs A and x, we need to analyze the intermediate parameter z. In total, we observe a sine-like dependency between x and z (which is proportional to y), where A determines the amplitude of the sine wave. We also see that B is linearly correlated with y, where the contribution from B appears to be summed with the contribution from z (x and A). In other words, through the visualizations, we have obtained a global overview of the parameter relationships. In this case, the Branch Model is succesful in overall mirroring the true underlying function.
