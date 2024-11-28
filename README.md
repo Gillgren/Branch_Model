@@ -6,7 +6,7 @@ Assume that we have a variable of interest y, and we want to investigate how it 
 
 y = Asin(10x) + B
 
-which we pretend we do not know.
+which we used to generate the database, where A, x and B are randomly sampled from a uniform distribution between 0 and 1. In a real scenario, we would of course not be aware of the true underlying function, but we include it here such that we can compare with the results of the Branch Model.
 
 # Step 1 
 
